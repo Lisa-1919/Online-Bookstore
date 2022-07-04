@@ -1,0 +1,90 @@
+.ppp{
+position: absolute;
+width: 440px;
+height: 80px;
+left: 50px;
+margin-top: 0px;
+
+font-family: 'Forum';
+font-style: normal;
+font-weight: 400;
+font-size: 57px;
+line-height: 80px;
+letter-spacing: -0.04em;
+color: #000000;
+}
+
+.product img{
+position: absolute;
+width: 504px;
+height: 569px;
+left: 28px;
+top: 285px;
+}
+
+.input_data{
+position: absolute;
+width: 623px;
+height: 600px;
+margin-left: 630px;
+margin-top: 80px;
+display: flex;
+flex-wrap:wrap;
+justify-content: flex-start;
+align-content: space-between;
+font-family: 'Forum';
+font-style: normal;
+font-weight: 400;
+font-size: 31px;
+line-height: 2px;
+letter-spacing: 0.02em;
+
+color: #000000;
+}
+
+.input_data p, .input_data input{
+width: 623px;
+font-family: 'Forum';
+font-style: normal;
+font-weight: 400;
+font-size: 31px;
+line-height: 2px;
+letter-spacing: 0.02em;
+color: #000000;
+margin-top:1px;
+}
+
+button{
+position: absolute;
+width: 422.74px;
+height: 101px;
+left: 10px;
+top: 690px;
+
+font-family: 'Forum';
+font-style: normal;
+font-weight: 400;
+font-size: 60px;
+line-height: 35px;
+/* or 58% */
+
+text-align: center;
+letter-spacing: 0.02em;
+
+color: #000000;
+background: #F67DF9;
+border-radius: 39px;
+border: none;
+}
+
+.input_description{
+font-family: 'Forum';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 5px;
+width: 623px;
+height: 250px;
+display: flex;
+flex-wrap:wrap;
+}

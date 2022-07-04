@@ -1,0 +1,50 @@
+.product_list{
+position:absolute;
+margin-top: 21px;
+width: 1292px;
+margin-left: 103px;
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-start;
+align-content: flex-start;
+}
+
+.search{
+width: 415px;
+height: 68px;
+margin-left: 120px;
+margin-top: 43px;
+margin-bottom: 0;
+border: 1px solid #F67DF9;
+}
+
+.search input, .search button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.search input{
+width: 282px;
+font-family: 'Forum';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 22px;
+color: #000000;
+top: 0;
+margin-left:50px;
+}
+.search button {
+wight:83px;
+height:68px;
+top: 0px;
+right: 0px;
+cursor: pointer;
+}
+.search button:before{
+content: url("/img/search.png");
+font-family: 'Forum';
+font-size: 16px;
+color: #F67DF9;
+}
