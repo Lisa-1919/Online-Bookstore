@@ -1,0 +1,14 @@
+html{
+box-sizing: border-box;
+}
+*, *::before, *::after{
+box-sizing: inherit;
+}
+
+li{
+ list-style-type: none;
+}
+.wrapper{
+max-width: 1300px;
+margin: 0 auto;
+}

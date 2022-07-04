@@ -1,0 +1,48 @@
+p{
+position: absolute;
+width: 440px;
+height: 80px;
+left: 50px;
+margin-top: 0px;
+
+font-family: 'Forum';
+font-style: normal;
+font-weight: 400;
+font-size: 57px;
+line-height: 80px;
+letter-spacing: -0.04em;
+color: #000000;
+}
+
+.input_data{
+position: absolute;
+width: 623px;
+height: 420px;
+left: 50px;
+margin-top: 80px;
+display: flex;
+flex-wrap:wrap;
+justify-content: flex-start;
+align-content: space-between;
+}
+
+button{
+width: 406px;
+height: 89px;
+margin-left: 744px;
+margin-top:320px;
+background: #F67DF9;
+border-radius: 39px;
+border: none;
+font-family: 'Forum';
+font-style: normal;
+font-weight: 400;
+font-size: 60px;
+line-height: 35px;
+/* or 58% */
+
+text-align: center;
+letter-spacing: 0.02em;
+
+color: #000000;
+}

@@ -1,0 +1,129 @@
+.product{
+width: 305px;
+height: 414px;
+border: 1px solid #F67DF9;
+margin-left: 18px;
+margin-bottom: 23px;
+}
+
+.product: first-child{
+margin-left:0;}
+
+.product img{
+width: 130px;
+height: 202px;
+margin-left: 84px;
+margin-top: 20px;
+}
+.title, .publisher, .author{
+margin-top:0;
+margin-bottom:0;
+font-family: 'Forum';
+font-style: normal;
+font-weight: 400;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: #000000;
+}
+.title{
+width: 305px;
+height: 79px;
+font-size: 35px;
+line-height: 29px;
+}
+.author{
+width: 305px;
+height: 26px;
+font-size: 24px;
+line-height: 26px;
+}
+.publisher{
+width: 305px;
+height: 17px;
+font-size: 15px;
+line-height: 17px;
+color: #D4D4D4;
+}
+.price{
+width: 100px;
+height: 28px;
+font-family: 'Forum';
+font-style: normal;
+font-weight: 400;
+font-size: 27px;
+line-height: 29px;
+text-align: right;
+color: #000000;
+}
+
+.add{
+width:290.5px;
+height: 53px;
+margin-left: 8px;
+margin-top: 4px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.add button{
+width: 178px;
+height: 53px;
+border: 1px solid #F67DF9;
+background: #F67DF9;
+border-radius: 66px;
+font-family: 'Forum';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 29px;
+text-align: center;
+text-transform: uppercase;
+color: #000000;
+}
+
+.delete_a{
+text-decoration: none;
+width: 24px;
+height: 28px;
+margin-left: 11px;
+margin-bottom: 14px;
+}
+
+.delete_img img{
+width: 24px;
+height: 28px;
+margin-left: 3px;
+margin-top: 0px;
+}
+
+.edit_b{
+width: 136px;
+height: 41px;
+font-family: 'Forum';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 29px;
+
+text-align: center;
+
+color: #000000;
+
+background: #F67DF9;
+border-radius: 39px;
+border: none;
+}
+
+.edit{
+position: absolute;
+width: 264px;
+height: 41px;
+margin-left: 8px;
+margin-bottom: 11px;
+display: flex;
+align-content: center;
+justify-content: space-between;
+}
