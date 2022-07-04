@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineBookstore</title>
+    <link href="./css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/create_product_style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header class="header">
+    <div class="wrapper">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <a href="./index.html" class="header__logo-link">
+                    <img src="./img/Logo.svg" alt="OnlineBookstore" class="header__logo-pic"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="wrapper">
+        <h1>Добавление товара: </h1>
+        <div class="input_data">
+            <form method="post">
+
+                <p>Название</p>
+                <input Type="text" name="#{ProductBean.title}" class="text_field"/>
+                <p>Автор</p>
+                <input Type="text" name="#{ProductBean.author}" class="text_field"/>
+                <p>Жанр</p>
+                <input Type="text" name="#{ProductBean.genre}" class="text_field"/>
+                <p>Цена</p>
+                <input Type="number" name="#{ProductBean.price}" class="text_field"/>
+                <input type="submit" value="Добавить" action="#{ProductBean.createProduct()}" class = "input"/>
+
+            </form>
+        </div>
+    </div>
+</main>
+</body>
+</html>

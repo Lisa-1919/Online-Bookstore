@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineBookstore</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/font_style.css" th:href="@{/css/font_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/view_style.css" th:href="@{/css/view_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/bag_page_style.css"
+          th:href="@{/css/bag_page_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<main class="main">
+    <div class="products">
+        <div th:each="order : ${orders}">
+            <div class="product">
+                <p class="title" th:text="${order.creationDate}"/>
+                <p class="author" th:text="${product.author}"/>
+                <p class="publisher" th:text="'Издательство ' + ${product.publisher}"/>
+                <p class="price" th:text="${product.price} + ' руб.'"/>
+            </div>
+            </form>
+        </div>
+    </div>
+</main>
+</body>
+</html>

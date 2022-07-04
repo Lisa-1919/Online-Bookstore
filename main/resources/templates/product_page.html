@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineBookstore</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/product_page.css" th:href="@{/css/product_page.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/font_style.css" th:href="@{/css/font_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/view_style.css" th:href="@{/css/view_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<main class="main">
+    <div class="img_book">
+        <img th:src="'/images/' + ${product.imgName}">
+    </div>
+    <p class="title" th:text="${product.title}"></p>
+    <p class="author" th:text="${product.author} + ', ' + ${product.publisher}"></p>
+    <p class="description" th:text="${product.description}"></p>
+    <p class="price" th:text="${product.price} + ' руб.'"></p>
+    <a class="to_basket" th:href="'/user/basket/add/' + ${product.id}">В КОРЗИНУ</a>
+</main>
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

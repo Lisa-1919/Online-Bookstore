@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineBookstore</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_admin_style.css"
+          th:href="@{/css/header_admin_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/font_style.css" th:href="@{/css/font_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/view_style.css" th:href="@{/css/view_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/edit_product.css" th:href="@{/css/edit_product.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header_admin :: header"></header>
+<main class="main">
+    <p class="ppp">Редактирование товара:</p>
+    <div th:each="element : ${products}" class="product">
+        <img th:src="'/images/' + ${element.imgName}"/>
+        <form method="post" class="input_data">
+            <p th:text="'Название: ' + ${element.title}"/>
+            <p th:text="'Автор: ' + ${element.author}"/>
+            <p th:text="'Жанр: ' + ${element.genre}"/>
+            <p th:text="'Издательство: ' + ${element.publisher}"/>
+            <p>Стоимость: </p>
+            <input type="number" name="price" step="0.1" th:value="${element.price}" placeholder="Стоимость">
+            <p>Описание: </p>
+            <div class="input_description">
+              <input name="description" th:value="${element.description}" placeholder="Описание" >
+            </div>
+            <button type="submit">Редактировать</button>
+        </form>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineBookstore</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/payment_and_shipping_style.css" th:href="@{/css/payment_and_shipping_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/font_style.css" th:href="@{/css/font_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/view_style.css" th:href="@{/css/view_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<main class="main">
+    <div class="wrapper">
+        <h1 class="title">СПОСОБЫ ОПЛАТЫ</h1>
+        <img class="methods" src="/img/shipping.png" alt="СЫМОВЫВОЗ: ул.Уборевича д.77(с 10:00 до 21:00),
+ул. Якуба Коласа д.25(с 8:00 до 17:00). Доставка курьером.">
+    </div>
+</main>
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

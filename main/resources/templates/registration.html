@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineBookstore</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/font_style.css" th:href="@{/css/font_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/style_registration.css"
+          th:href="@{/css/style_registration.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/view_style.css" th:href="@{/css/view_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<main class="main">
+    <div class="wrapper">
+        <div class="registration_block">
+            <h1>Регистрация</h1>
+            <form action="/registration" method="post">
+                <input type="text" name="firstName" placeholder="Введите имя">
+                <hr>
+                <br>
+                <input type="text" name="lastName" placeholder="Введите фамилию">
+                <hr>
+                <br>
+                <input type="text" name="address" placeholder="Введите адрес">
+                <hr>
+                <br>
+                <input type="text" name="username" placeholder="Введите логин">
+                <hr>
+                <br>
+                <input type="password" name="password" placeholder="Введите пароль">
+                <hr>
+                <br>
+                <input type="password" name="confirmPassword" placeholder="Подтвердите пароль">
+                <hr>
+                <br>
+                <a class="login_class" href="/login">Уже есть аккаунт? Войти</a>
+                <button type="submit">ГОТОВО!</button>
+            </form>
+        </div>
+    </div>
+</main>
+</body>
+</html>

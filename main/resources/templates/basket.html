@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineBookstore</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/font_style.css" th:href="@{/css/font_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/view_style.css" th:href="@{/css/view_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/bag_page_style.css"
+          th:href="@{/css/bag_page_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<main class="main">
+    <div class="products">
+        <div th:each="product : ${basket.products}">
+            <div class="product">
+                <img th:src="'/images/' + ${product.imgName}">
+                <p class="title" th:text="${product.title}"/>
+                <p class="author" th:text="${product.author}"/>
+                <p class="publisher" th:text="'Издательство ' + ${product.publisher}"/>
+                <p class="price" th:text="${product.price} + ' руб.'"/>
+            </div>
+            </form>
+        </div>
+    </div>
+    <form th:action="'/user/order/create/' + ${basket.user.id}" method="post">
+        <div class="order">
+            <div class="payment_shipping">
+                <div class="s_p1">
+                    <p>Выберите способ оплаты:</p>
+                </div>
+                <div class="p1">
+                    <input type="radio" id="uponReceipt" value="uponReceipt" name="payment">
+                    <label for="uponReceipt">при получении</label><br>
+                    <input type="radio" id="online" value="online" name="payment">
+                    <label for="online">картой онлайн</label>
+                </div>
+                <div class="s_p2">
+                    <p>Выберите способ доставки:</p>
+                </div>
+                <div class="p2">
+                    <input type="radio" id="address1" value="self_drop1" name="shipping">
+                    <label for="address1">самовывоз с ул. Уборевича д.77 (с 10:00 до 21:00)</label>
+                    <input type="radio" id="address2" value="self_drop2" name="shipping">
+                    <label for="address2">самовывоз с ул. Я. Коласа д.25 (с 8:00 до 17:00)</label>
+                    <input type="radio" id="courier" value="courier" name="shipping">
+                    <label for="courier">доставка курьером</label>
+                </div>
+            </div>
+            <p th:text="'Итого: ' + ${basket.sum} + 'руб.'"/>
+            <button type="submit">ОФОРМИТЬ ЗАКАЗ</button>
+        </div>
+    </form>
+</main>
+</body>
+</html>

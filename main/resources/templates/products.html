@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineBookstore</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_admin_style.css"
+          th:href="@{/css/header_admin_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/font_style.css" th:href="@{/css/font_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/view_style.css" th:href="@{/css/view_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/products.css"
+          th:href="@{/css/products.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/product_view.css" th:href="@{/css/product_view.css}"/>
+
+</head>
+<body>
+<header th:insert="blocks/header_admin :: header"></header>
+<main class="main">
+    <div class="wrapper">
+        <div class="search">
+            <form action="/store/search" method="post">
+                <input type="search" name="quest" placeholder="Что вы ищите?">
+                <button type="submit"></button>
+            </form>
+        </div>
+        <div class="product_list">
+            <div th:each="element : ${products}">
+                <div class="product">
+                    <form th:action="'/admin/product/' + ${element.id} + '/edit'" method="get">
+                        <img th:src="'/images/' + ${element.imgName}" class="product_img">
+                        <p class="title" th:text="${element.title}"/>
+                        <p class="author" th:text="${element.author}"/>
+                        <p class="publisher" th:text="${element.publisher}"/>
+                        <div class="edit">
+                            <p class="price" th:text="${element.price} + ' руб.'"/>
+                            <button type="submit" class="edit_b">Изменить</button>
+                            <a th:href="'/admin/product/' + ${element.id} + '/delete'" class="delete_a">
+                                <div class="delete_img">
+                                    <img src="/img/Vector.png">
+                                </div>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

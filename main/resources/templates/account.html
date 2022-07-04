@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineBookstore</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/font_style.css" th:href="@{/css/font_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/view_style.css" th:href="@{/css/view_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/account.css" th:href="@{/css/account.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<main class="main">
+    <div class="wrapper">
+        <div class="information">
+            <h2>Личная информация</h2>
+            <div class="data">
+                <p th:text="${user.firstName}"/>
+                <p th:text="${user.lastName}"/>
+                <p th:text="${user.username}"/>
+            </div>
+        </div>
+        <div class="actions">
+            <h2>История</h2>
+            <div class="history">
+                <a href="/user/basket">Корзина</a>
+                <a href="#!">Купленные товары</a>
+                <a href="#!">История заказов</a>
+            </div>
+        </div>
+    </div>
+    <a href="/logout" class="logout">ВЫЙТИ</a>
+</main>
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

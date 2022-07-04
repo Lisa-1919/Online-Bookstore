@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineBookstore</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_admin_style.css"
+          th:href="@{/css/header_admin_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/font_style.css" th:href="@{/css/font_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/login_style.css" th:href="@{/css/login_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/view_style.css" th:href="@{/css/view_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/add=_product.css" th:href="@{/css/add_product.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header_admin :: header"></header>
+<main class="main">
+    <p>Добавление товара:</p>
+    <form action="/admin/product/add" method="post" enctype="multipart/form-data">
+        <div class="input_data">
+            <input type="text" name="title" placeholder="Название">
+            <input type="text" name="author" placeholder="Автор">
+            <input type="text" name="genre" placeholder="Жанр">
+            <input type="text" name="publisher" placeholder="Издательство">
+            <input type="text" name="description" placeholder="Описание">
+            <input type="text" name="price" placeholder="Стоимость">
+            <input type="file" name="file" placeholder="Добавить изображение">
+        </div>
+        <button type="submit">Добавить</button>
+    </form>
+</main>
+</body>
+</html>

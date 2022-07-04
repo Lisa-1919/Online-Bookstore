@@ -1,0 +1,44 @@
+<div th:fragment="header">
+    <div class="wrapper">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <a href="/home" class="header__logo-link">
+                    <img src="/img/Logo.svg" alt="OnlineBookstore" class="header__logo-pic"/>
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a href="/store/catalog" class="header__link">КАТАЛОГ</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="/store/payment" class="header__link">ОПЛАТА</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="/store/shipping" class="header__link">ДОСТАВКА</a>
+                    </li>
+                    <li class="header__item-button">
+                        <a href="/user/basket" class="header__link">
+                            <img src="/img/Basket.svg" alt="КОРЗИНА" class="header__bap-pic"/>
+                        </a>
+                    </li>
+                    <li class="header__item-button">
+                        <a href="/account" class="header__link">
+                            <img src="/img/account.png" alt="МОЯ СТРАНИЦА" class="header__bap-pic"/>
+                        </a>
+                    </li>
+                    <li class="header__item-button">
+                        <div class="dropdown">
+                            <button><img src="/img/menu.png" alt="МЕНЮ" class="header__bap-pic"/></button>
+                            <div class="dropdown-content">
+                                <a href="/login">Вход</a>
+                                <a href="/registration">Регистрация</a>
+                                <a href="/logout">Выход</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

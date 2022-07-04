@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineBookstore</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_admin_style.css"
+          th:href="@{/css/header_admin_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/font_style.css" th:href="@{/css/font_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/view_style.css" th:href="@{/css/view_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/admin_account.css" th:href="@{/css/admin_account.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header_admin :: header"></header>
+<p class="hello" th:text="'Добро пожаловать, ' + ${user.firstName}"/>
+<div class="actions">
+    <p>Выберите, что хотите сделать:</p>
+    <a href="/admin/product/add">Добавить товар</a>
+    <a href="">Пользователи</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineBookstore</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/style_home.css" th:href="@{/css/style_home.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/footer_style.css" th:href="@{/css/footer_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/font_style.css" th:href="@{/css/font_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/view_style.css" th:href="@{/css/view_style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<main class="main">
+    <section class="intro">
+        <div class="search">
+            <form action="/store/search" method="post" class="form">
+                <p><input type="search" name="quest" placeholder="Что вы ищите?" class="search__form">
+                    <input type="submit" value="ПОИСК" class="search_button">
+                </p>
+            </form>
+        </div>
+    </section>
+    <section class="module">
+        <div class="wrapper">
+            <nav class="category">
+                <ul class="category__list">
+                    <li class="category__item">
+                        <a href="#!" class="category__link">
+                            <img src="/img/booksAllOfTime.svg" alt="КНИГИ ВСЕХ ВРЕМЕН"/>
+                        </a>
+                    </li>
+                    <li class="category__item">
+                        <a href="/store/product/31" class="category__link">
+                            <img src="/img/our_choice.svg" alt="НАШ ВЫБОР"/>
+                        </a>
+                    </li>
+                    <li class="category__item">
+                        <a href="/store/product/30" class="category__link">
+                            <img src="/img/booksOfMonth.svg" alt="КНИГИ МЕСЯЦА"/>
+                        </a>
+                    </li>
+                    <li class="category__item">
+                        <a href="/store/product/29" class="category__link">
+                            <img src="/img/recommendation.svg" alt="ЧИТАТЕЛИ РЕКОМЕНДУЮТ"/>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <section class="news">
+        <div class="wrapper">
+            <div class="news__title">
+                <img src="/img/news_of_month_title.svg" alt="НОВИНКИ МЕСЯЦА">
+                <hr border="3px solid #F67DF9">
+                <br>
+                <h1 class="month">ИЮНЬ</h1>
+            </div>
+            <ul class="news__body">
+                <li class="description__text">
+                    <p class="book__title">С тобой я дома</p>
+                    <p class="book__description">
+                        "С тобой я дома", – говорим мы кому-то особенному.
+                        Тому, с кем не приходится прятаться, заметать следы,
+                        притворяться и защищаться, – а можно просто быть собой.
+                        И строить бережные отношения, полные доверия, честности и заботы.
+                        В своей новой книге Ольга Примаченко, автор бестселлера
+                        "К себе нежно", говорит о том, как любить, оставаясь верными
+                        себе, – согревать друг друга теплом, не сгорая дотла.
+                        Эта книга обнимет одиноких, утешит расставшихся и поможет
+                        разобраться тем, кто запутался в своих чувствах.
+                    </p>
+                </li>
+                <li class="description__pic">
+                    <img src="/img/image13.svg">
+                </li>
+                <li class="description__button">
+                    <a href="/store/product/32">
+                        <img src="/img/learn_more.svg" alt="УЗНАТЬ БОЛЬШЕ"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

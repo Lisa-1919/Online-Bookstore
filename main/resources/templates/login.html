@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineBookstore</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/header_style.css" th:href="@{/css/header_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/font_style.css" th:href="@{/css/font_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/login_style.css"
+          th:href="@{/css/login_style.css}"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/view_style.css" th:href="@{/css/view_style.css}"/>
+</head>
+<body>
+<div th:if="${param.error}">
+    Invalid username and password.
+</div>
+<div th:if="${param.logout}">
+    You have been logged out.
+</div>
+<header th:insert="blocks/header :: header"></header>
+<main class="main">
+    <div class="wrapper">
+        <div class="login_block">
+            <h1>Авторизация</h1>
+            <form action="/login" method="post">
+                <input type="text" name="username" placeholder="Введите логин">
+                <hr>
+                <br>
+                <input type="password" name="password" placeholder="Введите пароль">
+                <hr>
+                <br>
+                <a class="registration" href="/registration">Ещё нет аккаунта? Зарегистрироваться</a>
+                <button type="submit">ВОЙТИ</button>
+            </form>
+        </div>
+    </div>
+</main>
+</body>
+</html>
